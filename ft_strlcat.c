@@ -6,7 +6,7 @@
 /*   By: skaewpan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 20:26:13 by skaewpan          #+#    #+#             */
-/*   Updated: 2023/04/29 23:12:23 by skaewpan         ###   ########.fr       */
+/*   Updated: 2023/04/30 22:37:09 by skaewpan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	len_dst = ft_strlen(dst);
 	stlen_dst = len_dst;
 	if (dstsize <= len_dst)
-	{
-		printf("as");
 		return (len_src + dstsize);
-	}
 	while (*src != '\0'&& len_dst < dstsize - 1)
 	{
 		dst[len_dst] = *src++;
