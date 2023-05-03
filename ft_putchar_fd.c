@@ -1,16 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: skaewpan <skaewpan@student.42.fr>          +#+  +:+       +#+        */
+/*   By: skaewpan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/29 08:52:19 by skaewpan          #+#    #+#             */
-/*   Updated: 2023/05/01 14:44:38 by skaewpan         ###   ########.fr       */
+/*   Created: 2023/05/01 21:32:37 by skaewpan          #+#    #+#             */
+/*   Updated: 2023/05/01 21:33:16 by skaewpan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
+#include"libft.h"
+
+void	ft_putchar_fd(char c, int fd)
 {
-	return (c >= 32 && c <= 126);
+	write (fd, &c, 1);
 }

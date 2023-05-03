@@ -6,24 +6,17 @@
 /*   By: skaewpan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/30 13:59:37 by skaewpan          #+#    #+#             */
-/*   Updated: 2023/04/30 16:00:44 by skaewpan         ###   ########.fr       */
+/*   Updated: 2023/05/01 19:11:42 by skaewpan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-static int	ft_check(int sign)
-{
-	if (sign == 1)
-		return (-1);
-	return (0);
-}
-
 int	ft_atoi(const char *str)
 {
 	int	i;
 	int	sign;
-	long	nb;
+	int	nb;
 
 	sign = 1;
 	nb = 0;
@@ -38,8 +31,6 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		if (nb > INT_MAXMIN && str[i] > '7')
-			return (ft_check(sign));
 		nb = (nb * 10) + (str[i] - '0');
 		i++;
 	}

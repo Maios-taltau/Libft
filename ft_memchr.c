@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: skaewpan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: skaewpan <skaewpan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 12:51:10 by skaewpan          #+#    #+#             */
-/*   Updated: 2023/04/29 13:02:24 by skaewpan         ###   ########.fr       */
+/*   Updated: 2023/05/01 19:14:12 by skaewpan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,16 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char *ostr;
+	unsigned char	*ostr;
+	unsigned char	uc;
 
 	ostr = (unsigned char *)s;
+	uc = (unsigned char)c;
 	while (n--)
 	{
-		if (*ostr == (char )c)
-			return (ostr);
+		if (*ostr == uc)
+			return ((void *)ostr);
+		ostr++;
 	}
-	return(NULL);
+	return (NULL);
 }

@@ -3,17 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: skaewpan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: skaewpan <skaewpan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 08:43:55 by skaewpan          #+#    #+#             */
-/*   Updated: 2023/04/29 08:50:15 by skaewpan         ###   ########.fr       */
+/*   Updated: 2023/05/01 14:42:31 by skaewpan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	isascii(int c)
+int	ft_isascii(int c)
 {
-	if (c >= 0 && c <= 127)
-		return (c);
-	else
-		return (0);
+	return (c >= 0 && c <= 127);
 }

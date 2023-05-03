@@ -6,17 +6,17 @@
 /*   By: skaewpan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/29 16:31:15 by skaewpan          #+#    #+#             */
-/*   Updated: 2023/04/29 16:37:56 by skaewpan         ###   ########.fr       */
+/*   Updated: 2023/05/01 19:10:57 by skaewpan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-void	bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	unsigned char *osrc;
+	unsigned char	*osrc;
 
 	osrc = s;
 	while (n--)
-		osrc[n] = '0';
+		*osrc++ = 0;
 }
